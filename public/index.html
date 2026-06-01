@@ -15,8 +15,8 @@
       <nav class="w-full flex justify-between items-center py-6 px-6 md:px-12 border-b border-zinc-200 bg-zinc-50 z-50 relative">
               <div class="font-heading text-xl font-bold tracking-tighter uppercase">Twelve Mile Capital</div>
               <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide uppercase">
-                <a href="#" class="hover:text-zinc-500 transition-colors">Home</a>
-                <a href="#" class="hover:text-zinc-500 transition-colors">Contact</a>
+                <a href="#home" class="hover:text-zinc-500 transition-colors">Home</a>
+                <a href="#contact" class="hover:text-zinc-500 transition-colors">Contact</a>
               </div>
               <button class="md:hidden flex items-center justify-center p-2">
                 <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -25,7 +25,7 @@
               </button>
             </nav>
                 
-      <section class="relative w-full pt-16 pb-32 px-6 md:px-12 bg-zinc-50 overflow-hidden">
+      <section id="home" class="relative w-full pt-16 pb-32 px-6 md:px-12 bg-zinc-50 overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <div class="lg:col-span-7 flex flex-col z-10">
             <h1 class="font-heading text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold leading-[0.85] tracking-tighter text-zinc-950 uppercase">
@@ -79,17 +79,20 @@
         </div>
       </section>
                 
-      <section class="py-20 bg-zinc-50">
+      <section id="contact" class="py-20 bg-zinc-50">
         <div class="container px-4 mx-auto">
           <div class="max-w-xl mx-auto">
             <h2 class="mb-8 text-3xl text-center md:text-4xl font-bold font-heading">
               <span>Get in touch</span>
             </h2>
-            <form action="#">
-              <input class="w-full py-3 pl-3 mb-4 border border-zinc-300 rounded bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" type="text" placeholder="Name">
-              <input class="w-full py-3 pl-3 mb-4 border border-zinc-300 rounded bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" type="email" placeholder="E-mail">
-              <textarea class="mb-4 w-full p-3 border border-zinc-300 rounded resize-none bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" name="message" cols="30" rows="10" placeholder="Your Message..."></textarea>
-              <button class="block w-full sm:w-auto px-8 py-3 text-sm bg-zinc-950 hover:bg-zinc-800 text-zinc-50 font-semibold border border-zinc-950 hover:border-zinc-800 rounded transition-colors duration-200 text-center">
+            <form action="https://formsubmit.co/info@twelvemilecap.com" method="POST">
+              <input type="hidden" name="_subject" value="Website contact submission">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input class="w-full py-3 pl-3 mb-4 border border-zinc-300 rounded bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" type="text" name="name" placeholder="Name" required>
+              <input class="w-full py-3 pl-3 mb-4 border border-zinc-300 rounded bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" type="email" name="email" placeholder="E-mail" required>
+              <textarea class="mb-4 w-full p-3 border border-zinc-300 rounded resize-none bg-white text-zinc-950 placeholder:text-zinc-500 focus:outline-none focus:border-zinc-950 transition-colors" name="message" cols="30" rows="10" placeholder="Your Message..." required></textarea>
+              <button type="submit" class="block w-full sm:w-auto px-8 py-3 text-sm bg-zinc-950 hover:bg-zinc-800 text-zinc-50 font-semibold border border-zinc-950 hover:border-zinc-800 rounded transition-colors duration-200 text-center">
                 <span>Send Message</span>
               </button>
             </form>
@@ -101,15 +104,18 @@
               <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
                 
                 
-                <form class="w-full max-w-md flex flex-col gap-8">
+                <form class="w-full max-w-md flex flex-col gap-8" action="https://formsubmit.co/info@twelvemilecap.com" method="POST">
+                  <input type="hidden" name="_subject" value="Website newsletter signup">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table">
                   <div class="relative w-full">
                     <p class="text-zinc-400 text-base md:text-lg mb-16 max-w-lg">
                   Sign up for early access to our thesis-driven insights, portfolio updates, and exclusive opportunities.
-                </p><input type="email" placeholder="Email address *" required="" class="w-full bg-transparent border-b border-zinc-700 py-4 px-2 text-zinc-50 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-50 transition-colors peer text-lg">
+                </p><input type="email" name="email" placeholder="Email address *" required="" class="w-full bg-transparent border-b border-zinc-700 py-4 px-2 text-zinc-50 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-50 transition-colors peer text-lg">
                   <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; display: initial !important; float: left !important;"></div></div>
                   <label class="flex items-start gap-4 cursor-pointer group">
                     <div class="relative flex items-center justify-center w-5 h-5 mt-1 border border-zinc-700 group-hover:border-zinc-50 transition-colors flex-shrink-0">
-                      <input type="checkbox" class="peer sr-only" required="">
+                      <input type="checkbox" class="peer sr-only" name="consent" required="">
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-zinc-50 opacity-0 peer-checked:opacity-100 transition-opacity" viewbox="0 0 14 10" fill="none">
                         <path d="M1 5L4.5 8.5L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"></path>
                       </svg>
@@ -132,7 +138,7 @@
       <footer class="border-t border-black/10 bg-white px-6 py-12 text-black sm:px-8 lg:px-12 bs-section-dragged">
         <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6">
           <div class="removed">
-            <a href="/" class="flex items-center gap-3" aria-label="Twelve Mile Capital home">
+            <a href="#home" class="flex items-center gap-3" aria-label="Twelve Mile Capital home">
               <span class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-black">Twelve Mile Capital</span>
             </a>
           </div>
